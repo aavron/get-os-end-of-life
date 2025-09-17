@@ -1,1 +1,1 @@
-This is a POC to read JSON data from https://endoflife.date/api/v1/products/android/ and https://endoflife.date/api/v1/products/ios/ and filter OS version that still maintained OS and not yet end of  life.
+This is a POC to read JSON data from https://endoflife.date/api/v1/products/android/ and https://endoflife.date/api/v1/products/ios/ and filter OS version that are still maintained and not yet end of life.
