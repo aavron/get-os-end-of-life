@@ -10,7 +10,6 @@ def get_min_supported_android_version():
 
     data = response.json()
 
-    # Normalize and filter supported versions
     supported_versions = []
     for entry in data["result"]["releases"]:
         iseol = entry["isEol"]
@@ -20,11 +19,10 @@ def get_min_supported_android_version():
             supported_versions.append(entry)
 
     if not supported_versions:
-        print("No supported Android versions found.")
+        print("No supported Android versions found")
         return
 
     # Find the minimum version among supported ones
-    # min_supported = min(supported_versions, key=lambda x: float(x["name"].split()[0]))
     min_supported = min(supported_versions, key=lambda x: float(x["name"]))
 
     print(f"Minimum supported Android version: {min_supported['name']} {min_supported['codename']}")
